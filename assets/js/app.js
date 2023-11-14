@@ -35,6 +35,7 @@ var playShow = function() {
   podcastAudio.play();
   playBtn.style.display = "none";
   pauseBtn.style.display = "inline-block";
+  backgroundVideo.play();
 };
 
 // Pause audio & mostra play btn
@@ -42,23 +43,7 @@ var pauseShow = function() {
   podcastAudio.pause();
   playBtn.style.display = "inline-block";
   pauseBtn.style.display = "none";
+  backgroundVideo.pause();
 };
 
-var podcastAudio = document.getElementById('podcast-audio');
-var backgroundVideo = document.getElementById('background-video');
-var playBtn = document.getElementById('podcast-play');
-var pauseBtn = document.getElementById('podcast-pause');
 
-function togglePlayPause() {
-    if (podcastAudio.paused) {
-        podcastAudio.play();
-        playBtn.style.display = "none";
-        pauseBtn.style.display = "inline-block";
-        backgroundVideo.play(); // Inicia o vídeo quando o áudio é reproduzido
-    } else {
-        podcastAudio.pause();
-        playBtn.style.display = "inline-block";
-        pauseBtn.style.display = "none";
-        backgroundVideo.pause(); // Pausa o vídeo quando o áudio é pausado
-    }
-}
