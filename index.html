@@ -15,19 +15,29 @@
       <!-- Fonts -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
       <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+      <script>
+         document.addEventListener('contextmenu', function (e) {
+             e.preventDefault(); // Impede o menu de contexto padrão
+         });
+     </script>
    
     </head>
    <body>
 
+      <div id="video-container">
+         <video id="background-video" loop muted>
+             <source src="audio/video.mp4" type="video/mp4">
+         </video>
+     </div>
+
       <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
       <div class="player-ctrl">
-      
-        <!-- Play Button -->
-        <a id="podcast-play" onclick="playShow()"><i class="fas fa-play" style='color:#4b494b'></i></a>
-      
-        <!-- Pause Button -->
-        <a id="podcast-pause" onclick="pauseShow()" style="display:none;"><i class="fa fa-pause" style="color:#4e4e4b"></i></a>
-      </div>
+         <!-- Play Button -->
+         <a id="podcast-play" onclick="togglePlayPause()"><i class="fas fa-play" style='color:#4b494b'></i></a>
+         <!-- Pause Button -->
+         <a id="podcast-pause" onclick="togglePlayPause()" style="display:none;"><i class="fa fa-pause" style="color:#4e4e4b"></i></a>
+     </div>
       
       
       <!-- Audio player -->
@@ -51,9 +61,9 @@
       
       <!-- Main -->
       <section class="main">
-         <img src="assets/img/pfp.gif" alt="" srcset="">
+         <img src="assets/img/pfp.png" alt="" srcset="">
          <span>Daniel.</span>
-         <p> Audaces Fortuna Juvat.</p>
+         <p>Na nave espacial... 🚀</p>
          <ul>
             <li><a target="_blank" href="https://discordapp.com/users/852695366196264970/"><i class="fab fa-discord"></i></a></li>
          </ul>
@@ -74,8 +84,8 @@
                </div>
                <div class="right">
                   <h1>My Name is Daniel.</h1>
-                  <p></p><i class='fas fa-laptop' style='font-size:16px;color:rgb(255, 255, 255)'></i>Desenvolvedor em JS e LUA, Aprendendo TS.<br>
-                     <i class='fas fa-book' style='font-size:16px;color:rgb(255, 255, 255)'></i>1 Ano Ensino Médio.<br>
+                  <p></p><i class='fas fa-laptop' style='font-size:16px;color:rgb(255, 255, 255)'></i>Desenvolvedor em JS e LUA.<br>
+                     <i class='fas fa-book' style='font-size:16px;color:rgb(255, 255, 255)'></i>Aprendendo TypeScript.<br>
                      <i class='fas fa-rocket' style='font-size:16px;color:rgb(255, 255, 255)'></i>Espaço Sideral..<br>
                   </p>
                </div>
