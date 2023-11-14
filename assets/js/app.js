@@ -30,6 +30,8 @@ var playBtn = document.getElementById('podcast-play');
 
 var pauseBtn = document.getElementById('podcast-pause');
 
+var backgroundVideo = document.getElementById('background-video');
+
 // Play audio & mostra pause btn
 var playShow = function() {
   podcastAudio.play();
